@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Border
+  - PickUp
+  - Enemy
+  - Bola
+  - PickUpEspecial
+  - Muro
+  - Interseccion
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: picks
+    uniqueID: 2817662871
+    locked: 0
+  - name: entidades
+    uniqueID: 1055215267
+    locked: 0
+  - name: muros
+    uniqueID: 1059706163
+    locked: 0

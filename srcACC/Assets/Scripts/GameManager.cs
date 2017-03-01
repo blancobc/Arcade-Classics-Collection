@@ -1,0 +1,89 @@
+﻿using UnityEngine;
+
+public enum Estado { INTRO, MENU, JUEGO }
+
+public class GameManager : MonoBehaviour {
+	
+	// Singleton
+	static GameManager _instancia;
+	static public GameManager instancia
+	{
+		get
+		{
+			if (_instancia == null)
+			{
+				_instancia = Object.FindObjectOfType(typeof(GameManager)) as GameManager;
+				
+				// si no la encuentro la creo
+				if (_instancia == null)
+				{
+					GameObject go = new GameObject("_gamemanager");
+					DontDestroyOnLoad(go);
+					_instancia = go.AddComponent<GameManager>();
+				}
+			}
+			return _instancia;
+		}
+	}
+	
+	// Estado
+	public Estado estadoActual {get; private set;}
+	public void cambiarEstado(Estado e) { this.estadoActual = e; }
+	
+	
+	
+	// Atributos y metodos unicos y accesibles desde cualquier parte
+	
+	// Atributos
+	public int puntosSnake;
+	public int puntosArkanoid;
+	public int puntosPacman;
+	public int pickupsPacman;
+	public int puntosInvaders;
+	public int puntosTetris;
+	public int puntosOtro;
+	public float valorTimeScale;
+
+	// Metodos
+
+	public void irAlMenu(){
+		guardarPartida();
+		quitarPausa ();
+		cambiarEstado(Estado.MENU);
+		Application.LoadLevel("Menu");
+	}
+	
+	//Si esta activo lo pausamos y si esta pausado ponemos el valor normal
+	public void pausar(){
+		if(Time.timeScale > 0){
+			valorTimeScale = Time.timeScale;
+			Time.timeScale = 0;
+		}
+		else{
+			quitarPausa ();
+		}
+	}
+	public void quitarPausa(){
+		if(Time.timeScale == 0) Time.timeScale = valorTimeScale;
+	}
+
+
+	public void reiniciar(){
+		guardarPartida ();
+		quitarPausa();
+		Application.LoadLevel(Application.loadedLevel);
+	}
+
+	public void guardarPartida(){
+		// si la puntuacion mejora el record, la guardamos
+		if(PlayerPrefs.GetInt ("puntosSnake") < puntosSnake) PlayerPrefs.SetInt("puntosSnake", puntosSnake);
+		if(PlayerPrefs.GetInt ("puntosArkanoid") < puntosArkanoid) PlayerPrefs.SetInt("puntosArkanoid", puntosArkanoid);
+		if(PlayerPrefs.GetInt ("puntosPacman") < puntosPacman) PlayerPrefs.SetInt("puntosPacman", puntosPacman);
+		if(PlayerPrefs.GetInt ("puntosInvaders") < puntosInvaders) PlayerPrefs.SetInt("puntosInvaders", puntosInvaders);
+		if(PlayerPrefs.GetInt ("puntosTetris") < puntosTetris) PlayerPrefs.SetInt("puntosTetris", puntosTetris);
+		if(PlayerPrefs.GetInt ("puntosOtro") < puntosOtro) PlayerPrefs.SetInt("puntosOtro", puntosOtro);
+	}
+
+	public void cargarPartida(){}
+	
+}
