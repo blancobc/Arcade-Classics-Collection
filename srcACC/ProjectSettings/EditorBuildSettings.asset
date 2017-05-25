@@ -7,13 +7,16 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Escenas/Intro.unity
+    guid: b2c8509dd94444f3c89292cc10ae4bab
   - enabled: 1
     path: Assets/Escenas/Menu.unity
+    guid: 22fc012b2b6524e4a9892b661c6e1863
   - enabled: 1
     path: Assets/Escenas/JuegoSnake.unity
-  - enabled: 1
-    path: Assets/Escenas/Puntuacion.unity
+    guid: 629ead7cdd58744f4ad33c24fbfead23
   - enabled: 1
     path: Assets/Escenas/JuegoArkanoid.unity
+    guid: d807bcc1e25ef41baa9b6571e7d9ae7c
   - enabled: 1
     path: Assets/Escenas/JuegoPacMan.unity
+    guid: 76c0406a51ff545b3bc39e1dd0c35a1c

@@ -79,9 +79,6 @@ public class GameManager : MonoBehaviour {
 		if(PlayerPrefs.GetInt ("puntosSnake") < puntosSnake) PlayerPrefs.SetInt("puntosSnake", puntosSnake);
 		if(PlayerPrefs.GetInt ("puntosArkanoid") < puntosArkanoid) PlayerPrefs.SetInt("puntosArkanoid", puntosArkanoid);
 		if(PlayerPrefs.GetInt ("puntosPacman") < puntosPacman) PlayerPrefs.SetInt("puntosPacman", puntosPacman);
-		if(PlayerPrefs.GetInt ("puntosInvaders") < puntosInvaders) PlayerPrefs.SetInt("puntosInvaders", puntosInvaders);
-		if(PlayerPrefs.GetInt ("puntosTetris") < puntosTetris) PlayerPrefs.SetInt("puntosTetris", puntosTetris);
-		if(PlayerPrefs.GetInt ("puntosOtro") < puntosOtro) PlayerPrefs.SetInt("puntosOtro", puntosOtro);
 	}
 
 	public void cargarPartida(){}

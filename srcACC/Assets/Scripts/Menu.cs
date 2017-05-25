@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
@@ -15,9 +16,7 @@ public class Menu : MonoBehaviour {
 	public Text puntosSnake;
 	public Text puntosArkanoid;
 	public Text puntosPacman;
-	public Text puntosSpaceInvaders;
-	public Text puntosTetris;
-	public Text puntosOtro;
+
 
 
 	void Start(){
@@ -26,9 +25,7 @@ public class Menu : MonoBehaviour {
 		puntosSnake.text = PlayerPrefs.GetInt("puntosSnake").ToString();
 		puntosArkanoid.text = PlayerPrefs.GetInt("puntosArkanoid").ToString();
 		puntosPacman.text = PlayerPrefs.GetInt("puntosPacman").ToString();
-		puntosSpaceInvaders.text = PlayerPrefs.GetInt("puntosSpaceInvaders").ToString();
-		puntosTetris.text = PlayerPrefs.GetInt("puntosTetris").ToString();
-		puntosOtro.text = PlayerPrefs.GetInt("puntosOtro").ToString();
+
 
 	}
 
@@ -38,7 +35,7 @@ public class Menu : MonoBehaviour {
 
 	public void OpcionIntro(){
 		GM.cambiarEstado(Estado.INTRO);
-		Application.LoadLevel("Intro");
+		SceneManager.LoadScene("Intro");
 	}
 	
 	public void OpcionSalir(){
@@ -47,21 +44,18 @@ public class Menu : MonoBehaviour {
 
 	public void OpcionSnake(){
 		GM.cambiarEstado(Estado.JUEGO);
-		Application.LoadLevel("JuegoSnake");
+		SceneManager.LoadScene("JuegoSnake");
 	}
 
 	public void OpcionArkanoid(){
 		GM.cambiarEstado(Estado.JUEGO);
-		Application.LoadLevel("JuegoArkanoid");
+		SceneManager.LoadScene("JuegoArkanoid");
 	}
 
 	public void OpcionPacman(){
 		GM.cambiarEstado(Estado.JUEGO);
-		Application.LoadLevel("JuegoPacMan");
+		SceneManager.LoadScene("JuegoPacMan");
 	}
 
-	public void OpcionTetris(){
-		GM.cambiarEstado(Estado.JUEGO);
-		Application.LoadLevel("JuegoTetris");
-	}
+
 }
