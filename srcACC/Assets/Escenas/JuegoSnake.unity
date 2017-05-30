@@ -279,7 +279,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158786235}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
   m_Name: 
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 158786235}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a88a26a276b4e47619ce2c5adad33fab, type: 3}
   m_Name: 
@@ -721,6 +721,7 @@ GameObject:
   - component: {fileID: 1077901383}
   - component: {fileID: 1077901382}
   - component: {fileID: 1077901384}
+  - component: {fileID: 1077901385}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -772,6 +773,22 @@ MonoBehaviour:
   espacioLateral: 1
   espacioSuperior: 4
   espacioInferior: 1
+--- !u!114 &1077901385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077901381}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ff4a2082f652431ca1ab614173c0c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iOSTappxID: 
+  AndroidTappxID: /120940746/Pub-18675-Android-7857
+  positionBanner: 2
+  Interstitial: 1
+  Banner: 1
 --- !u!1 &1340102658
 GameObject:
   m_ObjectHideFlags: 0
