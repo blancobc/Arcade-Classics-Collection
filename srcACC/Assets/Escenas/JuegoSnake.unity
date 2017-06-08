@@ -284,18 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6d4281e5d7cd44d8c6e38bc2c1b8d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
-  intensity: 2.67
-  chromaticAberration: 0.2
-  axialAberration: 0.5
-  blur: 0
-  blurSpread: 0.75
-  luminanceDependency: 0.25
-  blurDistance: 2.5
-  vignetteShader: {fileID: 4800000, guid: 627943dc7a9a74286b70a4f694a0acd5, type: 3}
-  separableBlurShader: {fileID: 4800000, guid: e97c14fbb5ea04c3a902cc533d7fc5d1, type: 3}
-  chromAberrationShader: {fileID: 4800000, guid: 2b4f29398d9484ccfa9fd220449f5eee,
-    type: 3}
 --- !u!114 &158786243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,18 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a88a26a276b4e47619ce2c5adad33fab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monochrome: 1
-  grainIntensityMin: 0.03
-  grainIntensityMax: 0.15
-  grainSize: 1
-  scratchIntensityMin: 0
-  scratchIntensityMax: 0
-  scratchFPS: 1
-  scratchJitter: 0.01
-  grainTexture: {fileID: 2800000, guid: ffa9c02760c2b4e8eb9814ec06c4b05b, type: 3}
-  scratchTexture: {fileID: 2800000, guid: 6205c27cc031f4e66b8ea90d1bfaa158, type: 3}
-  shaderRGB: {fileID: 4800000, guid: 5d7f4c401ae8946bcb0d6ff68a9e7466, type: 3}
-  shaderYUV: {fileID: 4800000, guid: 0e447868506ba49f0a73235b8a8b647a, type: 3}
 --- !u!1 &647616145
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +697,6 @@ GameObject:
   - component: {fileID: 1077901383}
   - component: {fileID: 1077901382}
   - component: {fileID: 1077901384}
-  - component: {fileID: 1077901385}
   m_Layer: 0
   m_Name: GM
   m_TagString: Untagged
@@ -741,7 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objPrefab: {fileID: 107858, guid: f4f5583f704c64120a8e6c6d93e06119, type: 2}
-  velocidad: 3
+  velocidad: 1
   espacioLateral: 1
   espacioSuperior: 4
   espacioInferior: 1
@@ -773,22 +748,6 @@ MonoBehaviour:
   espacioLateral: 1
   espacioSuperior: 4
   espacioInferior: 1
---- !u!114 &1077901385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1077901381}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff4a2082f652431ca1ab614173c0c19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  iOSTappxID: 
-  AndroidTappxID: /120940746/Pub-18675-Android-7857
-  positionBanner: 2
-  Interstitial: 1
-  Banner: 1
 --- !u!1 &1340102658
 GameObject:
   m_ObjectHideFlags: 0

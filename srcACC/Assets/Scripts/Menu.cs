@@ -38,8 +38,9 @@ public class Menu : MonoBehaviour {
 		SceneManager.LoadScene("Intro");
 	}
 	
-	public void OpcionSalir(){
-		Application.Quit();
+	public void OpcionContribuir(){
+		GM.cambiarEstado(Estado.CONTRIBUIR);
+		SceneManager.LoadScene("Contribuir");
 	}
 
 	public void OpcionSnake(){

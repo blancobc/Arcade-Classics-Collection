@@ -20,3 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenas/JuegoPacMan.unity
     guid: 76c0406a51ff545b3bc39e1dd0c35a1c
+  - enabled: 1
+    path: Assets/Escenas/Contribuir.unity
+    guid: 660f6b803ae0043aeb569225662dadf6

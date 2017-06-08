@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public enum Estado { INTRO, MENU, JUEGO }
+public enum Estado { INTRO, MENU, JUEGO, CONTRIBUIR }
 
 public class GameManager : MonoBehaviour {
 	
@@ -33,7 +34,7 @@ public class GameManager : MonoBehaviour {
 	
 	
 	// Atributos y metodos unicos y accesibles desde cualquier parte
-	
+
 	// Atributos
 	public int puntosSnake;
 	public int puntosArkanoid;
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviour {
 		guardarPartida();
 		quitarPausa ();
 		cambiarEstado(Estado.MENU);
-		Application.LoadLevel("Menu");
+		SceneManager.LoadScene("Menu");
 	}
 	
 	//Si esta activo lo pausamos y si esta pausado ponemos el valor normal
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour {
 	public void reiniciar(){
 		guardarPartida ();
 		quitarPausa();
-		Application.LoadLevel(Application.loadedLevel);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	public void guardarPartida(){
@@ -80,7 +81,6 @@ public class GameManager : MonoBehaviour {
 		if(PlayerPrefs.GetInt ("puntosArkanoid") < puntosArkanoid) PlayerPrefs.SetInt("puntosArkanoid", puntosArkanoid);
 		if(PlayerPrefs.GetInt ("puntosPacman") < puntosPacman) PlayerPrefs.SetInt("puntosPacman", puntosPacman);
 	}
-
-	public void cargarPartida(){}
+		
 	
 }

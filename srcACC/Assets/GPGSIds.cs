@@ -24,9 +24,9 @@
 
 public static class GPGSIds
 {
-        public const string leaderboard_arkanoid = "CgkIqryv_cEQEAIQAw"; // <GPGSID>
-        public const string leaderboard_snake = "CgkIqryv_cEQEAIQAg"; // <GPGSID>
-        public const string leaderboard_pacman = "CgkIqryv_cEQEAIQBA"; // <GPGSID>
+        public const string leaderboard_arkanoid = "CgkIzb7DpMgCEAIQAg"; // <GPGSID>
+        public const string leaderboard_snake = "CgkIzb7DpMgCEAIQAQ"; // <GPGSID>
+        public const string leaderboard_pacman = "CgkIzb7DpMgCEAIQAw"; // <GPGSID>
 
 }
 
